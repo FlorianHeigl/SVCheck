@@ -9,6 +9,7 @@ IBM San Volume Controller and FlashSystems.
 - [Spectrum Virtualize 8.2.1 or newer](http://www-01.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_ca/2/897/ENUS218-482/index.html&request_locale=en) is required
 - Spectrum Virtualize 8.1.3 introduced API access but [does not have the needed API calls to generate the report](https://github.com/IBM/SVCheck/issues/3).
 
+
 ###### Example output
 
 ![Excel File containing various columns matching SVC command outputs](https://github.com/FlorianHeigl/SVCheck/blob/master/screenshots/output.png?raw=true)
@@ -150,3 +151,13 @@ Do you want to continue? (y/n): y
 2020-04-28 21:52:31,577 INFO:	 Completed saving lseventlog information into Excel file
 2020-04-28 21:52:31,577 INFO:	 Succesfully generated ./output/192.168.10.100/SVCheck_192.168.10.100_2020-04-28_21-52-24.xlsx report
 ```
+
+
+###### Documentation
+
+The PDF only covers the 8.1 API. I couldn't find one for 8.2+. See the other links for potential information.
+
+- [Spectrum_Virtualize_API_8.1.3](https://www.ibm.com/docs/STVLF4_8.1.3/spectrum.virtualize.813.doc/Spectrum_Virtualize_API_8.1.3.pdf)
+- [tips-and-tricks-using-the-spectrum-virtualize-rest-ap](https://barrywhytestorage.blog/2020/08/03/tips-and-tricks-using-the-spectrum-virtualize-rest-api/)
+- [Using RESTful API against IBM Storage Virtualize](https://medium.com/possimpible/using-restfull-api-against-ibm-spectrum-virtualize-6761a3353030)
+- [Do More with Less: Automating IBM Storage FlashSystem Tasks with REST APIs, Scripting, and Ansible](https://www.redbooks.ibm.com/redpieces/pdfs/redp5736.pdf)
