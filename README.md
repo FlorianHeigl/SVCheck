@@ -63,7 +63,7 @@ optional arguments:
 ```
 
 
-###### Passwort handling
+###### Password handling
 
 To run not passing the password as parameter:
 
