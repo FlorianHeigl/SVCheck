@@ -63,7 +63,7 @@ optional arguments:
 ```
 
 
-####### Passwort handling
+###### Passwort handling
 
 To run not passing the password as parameter:
 
@@ -104,7 +104,7 @@ Do you want to continue? (y/n): y
 2020-04-28 21:52:31,577 INFO:	 Succesfully generated ./output/192.168.10.100/SVCheck_192.168.10.100_2020-04-28_21-52-24.xlsx report
 ```
 
-####### Insecure Password handling
+###### Insecure Password handling
 
 To run passing the password as parameter:
 
