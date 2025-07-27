@@ -6,14 +6,8 @@ IBM San Volume Controller and FlashSystems.
 
 ###### Must read
 
-- Python 3 is required
 - [Spectrum Virtualize 8.2.1 or newer](http://www-01.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_ca/2/897/ENUS218-482/index.html&request_locale=en) is required
 - Spectrum Virtualize 8.1.3 introduced API access but [does not have the needed API calls to generate the report](https://github.com/IBM/SVCheck/issues/3).
-- [requests, openpyxl and pandas modules **must** be installed](https://github.com/IBM/SVCheck/wiki/How-to-install-the-prerequisites) before running this tool
-- To generate the Excel any user role is valid for the user on Spectrum Virtualize system
-- If a command replies no data it generates an empty sheet in the Excel file
-- Excel file and logs are created on ./output/IP_ADDRESS/ directory
-- If your password has non ASCII characters do not pass it as OS parameter
 
 ###### Example output
 
@@ -22,19 +16,14 @@ IBM San Volume Controller and FlashSystems.
 
 screenshots/output.png 
 
-###### Return codes
-
-- 0 = Success
-- 1 = Generic error
-- 2 = Excel write error
-- 3 = Command run error
-- 4 = Credentials error
-- 5 = User role error
-- 6 = Cannot reach API port
-- 7 = Error loading SV_system class
 
 
 ###### Setup
+
+- Python 3 is required
+- Python modules requests, openpyxl, pandas modules are required
+- Below is the installation using venv, otherwise see the [IBM docs here](https://github.com/IBM/SVCheck/wiki/How-to-install-the-prerequisites)
+
 
 ```shell
 $ git clone https://github.com/FlorianHeigl/SVCheck.git
@@ -45,7 +34,12 @@ $ ./SVCheck <parameters>
 ```
 
 
-###### Parameters
+###### Usage / Parameters
+
+- To generate the Excel any user role is valid for the user on Spectrum Virtualize system
+- If a command replies no data it generates an empty sheet in the Excel file
+- Excel file and logs are created on `./output/IP_ADDRESS/` directory
+
 
 ```shell
 usage: SVCheck [-h] -i IPv4_ADDRESS -u USERNAME [-p PASSWORD] [-v] [-V]
@@ -61,6 +55,19 @@ optional arguments:
   -v, --verbose         show verbose messages in console
   -V, --version         show program's version number and exit
 ```
+
+###### Return codes
+
+|Exit Code|Meaning|
+|-|-------|
+|0|Success|
+|1|Generic error|
+|2|Excel write error|
+|3|Command run error|
+|4|Credentials error|
+|5|User role error|
+|6|Cannot reach API port|
+|7|Error loading SV_system class|
 
 
 ###### Password handling
@@ -106,7 +113,8 @@ Do you want to continue? (y/n): y
 
 ###### Insecure Password handling
 
-To run passing the password as parameter:
+To run passing the password as parameter.  
+If your password has non ASCII characters do not pass it as OS parameter.
 
 ```shell
 $ ./SVCheck -i 192.168.10.100 -u api -p dedicatedreadonlypass
