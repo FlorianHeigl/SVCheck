@@ -15,7 +15,12 @@ IBM San Volume Controller and FlashSystems.
 - Excel file and logs are created on ./output/IP_ADDRESS/ directory
 - If your password has non ASCII characters do not pass it as OS parameter
 
+###### Example output
 
+![Excel File containing various columns matching SVC command outputs](https://github.com/FlorianHeigl/SVCheck/screenshots/blob/master/output.png?raw=true)
+
+
+screenshots/output.png 
 
 ###### Return codes
 
