@@ -4,13 +4,13 @@ This tools generates Excel file of Spectrum Virtualize system via REST API calls
 IBM San Volume Controller and FlashSystems.
 
 
-###### Must read
+### Must read
 
 - [Spectrum Virtualize 8.2.1 or newer](http://www-01.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_ca/2/897/ENUS218-482/index.html&request_locale=en) is required
 - Spectrum Virtualize 8.1.3 introduced API access but [does not have the needed API calls to generate the report](https://github.com/IBM/SVCheck/issues/3).
 
 
-###### Example output
+### Example output
 
 ![Excel File containing various columns matching SVC command outputs](https://github.com/FlorianHeigl/SVCheck/blob/master/screenshots/output.png?raw=true)
 
@@ -19,7 +19,7 @@ screenshots/output.png
 
 
 
-###### Setup
+## Setup
 
 - Python 3 is required
 - Python modules requests, openpyxl, pandas modules are required
@@ -35,12 +35,17 @@ $ ./SVCheck <parameters>
 ```
 
 
-###### Usage / Parameters
+## Usage
 
+### Description
+
+The script generates an Excel file.
+
+- Excel file and logs are created on `./output/IP_ADDRESS/` directory
 - To generate the Excel any user role is valid for the user on Spectrum Virtualize system
 - If a command replies no data it generates an empty sheet in the Excel file
-- Excel file and logs are created on `./output/IP_ADDRESS/` directory
 
+### Parameters
 
 ```shell
 usage: SVCheck [-h] -i IPv4_ADDRESS -u USERNAME [-p PASSWORD] [-v] [-V]
@@ -57,7 +62,7 @@ optional arguments:
   -V, --version         show program's version number and exit
 ```
 
-###### Return codes
+#### Return codes
 
 |Exit Code|Meaning|
 |-|-------|
@@ -70,8 +75,9 @@ optional arguments:
 |6|Cannot reach API port|
 |7|Error loading SV_system class|
 
+#### Password handling
 
-###### Password handling
+##### Interactive
 
 To run not passing the password as parameter:
 
@@ -112,10 +118,11 @@ Do you want to continue? (y/n): y
 2020-04-28 21:52:31,577 INFO:	 Succesfully generated ./output/192.168.10.100/SVCheck_192.168.10.100_2020-04-28_21-52-24.xlsx report
 ```
 
-###### Insecure Password handling
+##### via Command line
 
 To run passing the password as parameter.  
 If your password has non ASCII characters do not pass it as OS parameter.
+This is insecure since the password can end up visible in your shell history or /proc.
 
 ```shell
 $ ./SVCheck -i 192.168.10.100 -u api -p dedicatedreadonlypass
@@ -153,8 +160,9 @@ Do you want to continue? (y/n): y
 ```
 
 
-###### Documentation
+## Documentation
 
+Some documentation regarding the SVC API.
 The PDF only covers the 8.1 API. I couldn't find one for 8.2+. See the other links for potential information.
 
 - [Spectrum_Virtualize_API_8.1.3](https://www.ibm.com/docs/STVLF4_8.1.3/spectrum.virtualize.813.doc/Spectrum_Virtualize_API_8.1.3.pdf)
