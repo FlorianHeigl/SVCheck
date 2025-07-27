@@ -34,8 +34,18 @@ screenshots/output.png
 - 7 = Error loading SV_system class
 
 
+###### Setup
 
-###### How to use the tool
+```shell
+$ git clone https://github.com/FlorianHeigl/SVCheck.git
+$ cd SVCheck
+$ python3 -m venv .venv
+$ .venv/bin/activate
+$ ./SVCheck <parameters>
+```
+
+
+###### Parameters
 
 ```shell
 usage: SVCheck [-h] -i IPv4_ADDRESS -u USERNAME [-p PASSWORD] [-v] [-V]
@@ -51,6 +61,9 @@ optional arguments:
   -v, --verbose         show verbose messages in console
   -V, --version         show program's version number and exit
 ```
+
+
+####### Passwort handling
 
 To run not passing the password as parameter:
 
@@ -91,10 +104,12 @@ Do you want to continue? (y/n): y
 2020-04-28 21:52:31,577 INFO:	 Succesfully generated ./output/192.168.10.100/SVCheck_192.168.10.100_2020-04-28_21-52-24.xlsx report
 ```
 
+####### Insecure Password handling
+
 To run passing the password as parameter:
 
 ```shell
-$ ./SVCheck -i 192.168.10.100 -u api -p verysecretpass
+$ ./SVCheck -i 192.168.10.100 -u api -p dedicatedreadonlypass
 
  Welcome Spectrum Virtualize Checker (SVCheck) version 1.0
 
