@@ -2,6 +2,7 @@
 
 This tools generates Excel file of Spectrum Virtualize system via REST API calls.  
 The reports contain asset data, inventory of objects, usage and performance metrics.
+Using the API comes back with results much faster than SSH-based access.
 
 
 ### Must read
