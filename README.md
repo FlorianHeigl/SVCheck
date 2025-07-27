@@ -1,11 +1,12 @@
 # Spectrum Virtualize Check (SVCheck)
 
-This tools generates Excel file of Spectrum Virtualize system via REST API calls.
-IBM San Volume Controller and FlashSystems.
+This tools generates Excel file of Spectrum Virtualize system via REST API calls.  
+The reports contain asset data, inventory of objects, usage and performance metrics.
 
 
 ### Must read
 
+- Usable with IBM San Volume Controller and FlashSystems, Storwize Gen2 and Lenovo V3700 Gen2/Gen2 XP.
 - [Spectrum Virtualize 8.2.1 or newer](http://www-01.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_ca/2/897/ENUS218-482/index.html&request_locale=en) is required
 - Spectrum Virtualize 8.1.3 introduced API access but [does not have the needed API calls to generate the report](https://github.com/IBM/SVCheck/issues/3).
 
