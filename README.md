@@ -17,7 +17,7 @@ IBM San Volume Controller and FlashSystems.
 
 ###### Example output
 
-![Excel File containing various columns matching SVC command outputs](https://github.com/FlorianHeigl/SVCheck/screenshots/blob/master/output.png?raw=true)
+![Excel File containing various columns matching SVC command outputs](https://github.com/FlorianHeigl/SVCheck/blob/master/screenshots/output.png?raw=true)
 
 
 screenshots/output.png 
